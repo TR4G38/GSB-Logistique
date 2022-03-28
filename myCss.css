@@ -1,0 +1,181 @@
+html{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+
+/*--------------NAVBAR PART--------------*/
+
+/*Mise en page navbar*/
+.navbar{
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    justify-content: left;
+    border-right: solid 1px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    background-color: white;
+    border-radius: 2px;
+    transition-duration: 0.7s;
+    color: #78a9;
+    position: relative;
+    overflow:hidden;
+}
+
+.navbar:hover{
+    width:150%;
+    transition-duration: 0.7s;
+}
+
+/*Liens de redirection*/
+.navbar ul{
+    position: absolute;
+    list-style-type: none;
+    margin-left: -5%;
+}
+
+.navbar li{
+    margin-bottom: 3em;
+    white-space: nowrap;
+}
+
+.navbar a{ 
+ text-decoration:none;
+ color: rgb(65, 65, 65);
+ font-family: Impact, Charcoal, sans-serif;
+} 
+
+.nav-content{
+    font-size: small;
+    display: inline;
+    opacity: 0;
+    transition-duration: 0.4s;
+}
+
+.navbar:hover .nav-content{
+    opacity: 1;
+    margin-left: 10px;
+    transition-delay: 0.2s;
+    transition-duration: 0.7s !important;
+}
+
+.navbar li{
+    transition-duration: 0.3s;
+}
+
+.navbar li:hover{
+    opacity: 0.7;
+    border-radius: 10px 0 0px 10px;
+    padding-left: 10px;
+    width: 110%;
+}
+
+/*Bouton déconnexion*/
+.disconnectButton{
+    border: 2px;
+    margin-top: 20px;
+    background: none;
+    color: rgb(65, 65, 65);
+}
+
+.navbar form{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transition-duration: 0.7s;
+}
+
+.navbar:hover form{
+    transition-duration: 0.7s;
+    left: 40%;
+}
+
+.disconnectButton:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+
+/*--------------LOGIN PART--------------*/
+.container{
+    width: 230px;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+
+.logForm{
+    background-color: rgb(143, 143, 202);
+}
+
+.alert{
+    background-color: red;
+    color: white;
+}
+
+.grille{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.col1{
+    grid-column: 1/2;
+    background-image: url('https://traitdunion-creation.fr/wp-content/uploads/2018/05/leone-960x1080.jpg');
+    background-position: center;
+}
+
+.col2{
+    grid-column: 2/2;
+}
+
+.iconInput {
+    position: relative;
+    margin-top: 20px;
+}
+  
+.iconInput i{
+    position: absolute;
+    left: 8px;
+    bottom : 3px;
+}
+
+.iconInput input{
+    padding-left: 30px;
+}
+
+.connectButton{
+    margin-left: 40%;
+    border: 2px;
+    margin-top: 20px;
+    background: none;
+}
+
+.connectButton:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+
+/*--------------GRID AFTER LOGGED--------------*/
+.grid{
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 90%; /*Correspond à la width de navbar pour qu'elle ne dépasse pas sur content*/
+}
+
+.colNav{
+    grid-column: 1/2;
+    z-index: 1000;
+}
+
+.colContent{
+    grid-column: 2/2;
+}
+
+/*TABLEAUX COMMANDES*/
+table.tabComTable, table.tabComTable>thead>tr>th, table.tabComTable>tbody>tr>td{
+    border: 1px solid black;
+}
